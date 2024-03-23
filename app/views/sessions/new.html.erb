@@ -1,0 +1,16 @@
+<h1> Authentication </h1>
+
+<%= form_with url: sessions_path do |f|%>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, required: true %>
+  </div>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+
+<% end %>
