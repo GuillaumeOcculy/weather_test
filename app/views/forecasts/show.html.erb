@@ -1,13 +1,30 @@
-<h1><%= "#{@forecast.city.name} #{@forecast.date}" %></h1>
+<h1 class='text-center'><%= @forecast.city.name.titleize %></h1>
 
 <%= link_to "New forecast", [:new, :forecast] %>
-<p>
-  <b>Temperature min:</b>
-  <%= "#{@forecast.min_temperature} #{@forecast.unit}" %>
-</p>
 
-<p>
-  <b>Temperature max:</b>
-  <%= "#{@forecast.max_temperature} #{@forecast.unit}" %>
-</p>
+<br>
+<br>
+<br>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col"><%= @forecast.date.strftime("%a. %d %B") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Min Temperature</th>
+      <td><%= "#{@forecast.min_temperature} #{@forecast.unit}°" %></td>
+    </tr>
+    <tr>
+      <th scope="row">Max Temperature</th>
+      <td><%= "#{@forecast.max_temperature} #{@forecast.unit}°" %></td>
+    </tr>
+    <tr>
+      <th scope="row">Average Temperature</th>
+      <td colspan="2"><%= "#{@forecast.average_temperature} #{@forecast.unit}°" %></td>
+    </tr>
+  </tbody>
+</table>
