@@ -7,7 +7,7 @@ class Forecast < ApplicationRecord
   validates :max_temperature, presence: true, numericality: true
   validates :unit, presence: true, inclusion: { in: %w[C] }
 
-  before_validation :set_attributes
+  before_validation :set_attributes, if: :response_changed?
 
   def self.average_temperature
     sum(&:average_temperature) / count
