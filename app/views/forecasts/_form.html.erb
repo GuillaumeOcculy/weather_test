@@ -1,7 +1,7 @@
 <%= form_with model: @forecast do |f| %>
   <div class="field">
     <%= f.label :city %>
-    <%= f.text_field :city, autofocus: true %>
+    <%= f.select :city, ["London", "New-York", "Paris", "Seoul", "Tokyo"], selected: current_user.prefered_city %>
   </div>
 
   <div class="actions">
