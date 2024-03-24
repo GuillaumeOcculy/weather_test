@@ -33,7 +33,7 @@ class AverageTemperatureService < ApplicationService
 
   def validate_city_names_are_included
     city_names.each do |city_name|
-      errors.add(:city_names, "#{city_name} is not included in the list") unless City::NAMES.include?(city_name.capitalize)
+      errors.add(:city_names, "#{city_name} is not included in the list") unless City::NAMES.include?(city_name)
     end
   end
 end
