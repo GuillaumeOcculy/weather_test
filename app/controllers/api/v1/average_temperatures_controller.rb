@@ -1,4 +1,6 @@
 class Api::V1::AverageTemperaturesController < Api::V1::BaseController
+  before_action :authenticate_user!
+
   def show
     res = AverageTemperatureService.call(params[:cities])
     if res.success?
