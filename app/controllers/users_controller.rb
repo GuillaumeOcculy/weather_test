@@ -10,7 +10,8 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "User created successfully"
-      redirect_to [:edit, @user]
+      session[:user_id] = @user.id
+      redirect_to root_path
     else
       flash[:notice] = @user.errors.full_messages.join(", ")
       render :new, status: :unprocessable_entity
