@@ -12,7 +12,8 @@ class UsersController < ApplicationController
       flash[:notice] = "User created successfully"
       redirect_to [:edit, @user]
     else
-      render :new
+      flash[:notice] = @user.errors.full_messages.join(", ")
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -24,7 +25,8 @@ class UsersController < ApplicationController
       flash[:notice] = "User updated successfully"
       redirect_to edit_user_path(@user)
     else
-      render :edit
+      flash[:notice] = @user.errors.full_messages.join(", ")
+      render :edit, status: :unprocessable_entity
     end
   end
 
