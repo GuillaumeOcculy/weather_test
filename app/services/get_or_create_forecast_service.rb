@@ -12,6 +12,7 @@ class GetOrCreateForecastService < ApplicationService
 
   def call
     validate
+
     find_or_create_city
     find_forecast || create_forecast
   rescue StandardError => e
@@ -21,6 +22,8 @@ class GetOrCreateForecastService < ApplicationService
   private
 
   def find_or_create_city
+    return if error?
+
     city_service = GetOrCreateCityService.call(location)
     self.city = city_service.city
 
