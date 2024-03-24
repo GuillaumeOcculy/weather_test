@@ -25,3 +25,5 @@ Things you may want to cover:
 * You need to add your `ACCU_WEATHER_API_KEY` within `.env` file. You need to register on [https://developer.accuweather.com/apis](https://developer.accuweather.com/apis) then follow the instructions. You need to ask for a `Core Weather Limited Trial` product.
 
 * Run `rails server` and go to [localhost:3000](http://localhost:3000)
+
+* Rack Attack: On production, you can only make 5 calls per 10 seconds

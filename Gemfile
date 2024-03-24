@@ -53,6 +53,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "httparty", "~> 0.21"
+gem 'rack-attack'
+
 
 gem 'rswag-api', '~> 2.13'
 gem 'rswag-ui', '~> 2.13'
