@@ -10,7 +10,7 @@
 
   <div class="field">
     <%= f.label :prefered_city %><br />
-    <%= f.select :prefered_city, ["London", "New-York", "Paris", "Seoul", "Tokyo"] %>
+    <%= f.select :prefered_city, City::NAMES %>
   </div>
   
   <div class="actions">
