@@ -4,6 +4,13 @@
     <%= f.select :city, ["London", "New-York", "Paris", "Seoul", "Tokyo"], selected: current_user.prefered_city %>
   </div>
 
+  <div class="field">
+    <%= f.label :date %>
+    <% 5.times do |i| %>
+      <%= f.radio_button :date, Date.today + i %> <%= (Date.today + i).strftime("%A") %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Search" %>
   </div>

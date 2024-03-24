@@ -2,19 +2,20 @@ require "accu_weather_api"
 
 class GetOrCreateForecastService < ApplicationService
   validates :location, presence: true
+  validates :date, presence: true
 
-  attr_reader :location
+  attr_reader :location, :date
   attr_accessor :city, :forecast
 
-  def initialize(location)
+  def initialize(location, date = Date.today)
     @location = location
+    @date = date
   end
 
   def call
     validate
     find_or_create_city
-    find_or_create_forecast
-
+    find_forecast || create_forecast
   rescue StandardError => e
     fail!(e.message)
   end
@@ -28,14 +29,25 @@ class GetOrCreateForecastService < ApplicationService
     fail!("City not found") unless city
   end
 
-  def find_or_create_forecast
+  def find_forecast
     return if error?
 
-    date = Date.today
-    self.forecast = Forecast.find_or_create_by(city: city, date: date) do |forecast|
-      forecast.city = city
-      forecast.date = date
-      forecast.response = AccuWeatherApi.get_forecast_five_days(city.accu_weather_key)
+    self.forecast = Forecast.find_by(city: city, date: date)
+  end
+
+  def create_forecast
+    return if error?
+
+    response = AccuWeatherApi.get_forecast_five_days(city.accu_weather_key)
+
+    selected_date_forecast = response.find do |forecast|
+      forecast["Date"].start_with?(date.to_s)
     end
+
+    self.forecast = Forecast.create(
+      city: city,
+      date: date,
+      response: selected_date_forecast
+    )
   end
 end

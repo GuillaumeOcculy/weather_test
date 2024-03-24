@@ -25,6 +25,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_23_213737) do
   create_table "forecasts", force: :cascade do |t|
     t.bigint "city_id", null: false
     t.date "date", null: false
+    t.decimal "min_temperature", precision: 5, scale: 2, null: false
+    t.decimal "max_temperature", precision: 5, scale: 2, null: false
+    t.string "unit", null: false
     t.jsonb "response", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

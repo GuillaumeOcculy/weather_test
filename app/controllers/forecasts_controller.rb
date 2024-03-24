@@ -9,11 +9,14 @@ class ForecastsController < ApplicationController
 
   def create
     name = forecast_params[:city].strip.downcase
-    res = GetOrCreateForecastService.call(name)
+    date = forecast_params[:date] || Date.today
+
+    res = GetOrCreateForecastService.call(name, date)
 
     if res.success?
       redirect_to res.forecast
     else
+      @forecast = Forecast.new
       flash[:notice] = res.error_messages
       render :new, status: :unprocessable_entity
     end
@@ -26,6 +29,6 @@ class ForecastsController < ApplicationController
   private
 
   def forecast_params
-    params.require(:forecast).permit(:city)
+    params.require(:forecast).permit(:city, :date)
   end
 end
