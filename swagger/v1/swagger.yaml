@@ -4,6 +4,31 @@ info:
   title: Weather Test API V1
   version: v1
 paths:
+  "/api/v1/sessions":
+    post:
+      summary: Creates a session
+      tags:
+      - Sessions
+      parameters: []
+      responses:
+        '200':
+          description: session created
+        '401':
+          description: wrong credentials
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+              required:
+              - email
+              - password
   "/api/v1/users":
     post:
       summary: Creates a user
