@@ -1,14 +1,14 @@
 {
   "Headline": {
-    "EffectiveDate": "2024-03-23T19:00:00+01:00",
-    "EffectiveEpochDate": 1711216800,
-    "Severity": 5,
-    "Text": "Expect showers Saturday evening",
-    "Category": "rain",
-    "EndDate": "2024-03-24T01:00:00+01:00",
-    "EndEpochDate": 1711238400,
-    "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?lang=en-us",
-    "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?lang=en-us"
+    "EffectiveDate": "2024-03-28T13:00:00+01:00",
+    "EffectiveEpochDate": 1711627200,
+    "Severity": 4,
+    "Text": "High winds Thursday afternoon, with gusts past 65 kph",
+    "Category": "wind",
+    "EndDate": "2024-03-28T19:00:00+01:00",
+    "EndEpochDate": 1711648800,
+    "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?unit=c&lang=en-us"
   },
   "DailyForecasts": [
     {
@@ -16,14 +16,14 @@
       "EpochDate": 1711173600,
       "Temperature": {
         "Minimum": {
-          "Value": 39,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 3.9,
+          "Unit": "C",
+          "UnitType": 17
         },
         "Maximum": {
-          "Value": 53,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 11.7,
+          "Unit": "C",
+          "UnitType": 17
         }
       },
       "Day": {
@@ -43,22 +43,22 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=1&lang=en-us",
-      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=1&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?unit=c&lang=en-us"
     },
     {
       "Date": "2024-03-24T07:00:00+01:00",
       "EpochDate": 1711260000,
       "Temperature": {
         "Minimum": {
-          "Value": 35,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 1.9,
+          "Unit": "C",
+          "UnitType": 17
         },
         "Maximum": {
-          "Value": 53,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 11.9,
+          "Unit": "C",
+          "UnitType": 17
         }
       },
       "Day": {
@@ -76,22 +76,22 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=2&lang=en-us",
-      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=2&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=1&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=1&unit=c&lang=en-us"
     },
     {
       "Date": "2024-03-25T07:00:00+01:00",
       "EpochDate": 1711346400,
       "Temperature": {
         "Minimum": {
-          "Value": 44,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 7.5,
+          "Unit": "C",
+          "UnitType": 17
         },
         "Maximum": {
-          "Value": 55,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 12.8,
+          "Unit": "C",
+          "UnitType": 17
         }
       },
       "Day": {
@@ -107,22 +107,22 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=3&lang=en-us",
-      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=3&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=2&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=2&unit=c&lang=en-us"
     },
     {
       "Date": "2024-03-26T07:00:00+01:00",
       "EpochDate": 1711432800,
       "Temperature": {
         "Minimum": {
-          "Value": 44,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 4.8,
+          "Unit": "C",
+          "UnitType": 17
         },
         "Maximum": {
-          "Value": 53,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 11.2,
+          "Unit": "C",
+          "UnitType": 17
         }
       },
       "Day": {
@@ -142,22 +142,22 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=4&lang=en-us",
-      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=4&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=3&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=3&unit=c&lang=en-us"
     },
     {
       "Date": "2024-03-27T07:00:00+01:00",
       "EpochDate": 1711519200,
       "Temperature": {
         "Minimum": {
-          "Value": 44,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 6.2,
+          "Unit": "C",
+          "UnitType": 17
         },
         "Maximum": {
-          "Value": 53,
-          "Unit": "F",
-          "UnitType": 18
+          "Value": 11.1,
+          "Unit": "C",
+          "UnitType": 17
         }
       },
       "Day": {
@@ -177,8 +177,8 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=5&lang=en-us",
-      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=5&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=4&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/fr/paris/623/daily-weather-forecast/623?day=4&unit=c&lang=en-us"
     }
   ]
 }
