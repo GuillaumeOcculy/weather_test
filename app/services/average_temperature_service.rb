@@ -12,19 +12,24 @@ class AverageTemperatureService < ApplicationService
   def call
     validate
 
+    find_average_temperature
+  rescue StandardError => e
+    fail!(e.message)
+  end
+
+  private
+
+  def find_average_temperature
+    return if error?
+
     city_names.each do |city_name|
       GetOrCreateForecastService.call(city_name)
     end
 
     forecasts = Forecast.where(city: City.where(name: city_names), date: Date.today)
 
-    @average_temperature = forecasts.average_temperature.round(2)
-    
-  rescue StandardError => e
-    fail!(e.message)
+    @average_temperature = forecasts.average_temperature.to_f.round(2)
   end
-
-  private
 
   def validate_city_names_are_included
     city_names.each do |city_name|
