@@ -3,11 +3,11 @@
 <%= link_to "New forecast", [:new, :forecast] %>
 <p>
   <b>Temperature min:</b>
-  <%= @forecast.min_temperature %>
+  <%= "#{@forecast.min_temperature} #{@forecast.unit}" %>
 </p>
 
 <p>
   <b>Temperature max:</b>
-  <%= @forecast.max_temperature %>
+  <%= "#{@forecast.max_temperature} #{@forecast.unit}" %>
 </p>
 
