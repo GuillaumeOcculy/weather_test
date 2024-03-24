@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_23_210325) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_23_213737) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_23_210325) do
     t.index ["name"], name: "index_cities_on_name", unique: true
   end
 
+  create_table "forecasts", force: :cascade do |t|
+    t.bigint "city_id", null: false
+    t.date "date", null: false
+    t.jsonb "response", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_forecasts_on_city_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -30,4 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_23_210325) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "forecasts", "cities"
 end
