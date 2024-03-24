@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Weather Test App
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.3.0
 
-* System dependencies
+* Rails version 7.0.8
 
-* Configuration
+* Postgresql
 
-* Database creation
+* Bootstrap
 
-* Database initialization
+* [API Documentation](http://localhost:3000/api-docs)
 
-* How to run the test suite
+* You can run: `rspec spec` 
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database initialization : `rails db/setup`
 
-* Deployment instructions
+* User credentials : `text@example.com` / `password`
 
-* ...
+* Because of Accu Weather API limitations (50 calls / day), I save responses so I'm not making the same request twice.
+
+* You need to add your `ACCU_WEATHER_API_KEY` within `.env` file. You need to register on [https://developer.accuweather.com/apis](https://developer.accuweather.com/apis) then follow the instructions. You need to ask for a `Core Weather Limited Trial` product.
+
+* Run `rails server` and go to [localhost:3000](http://localhost:3000)
