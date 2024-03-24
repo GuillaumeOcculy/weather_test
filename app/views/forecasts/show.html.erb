@@ -1,0 +1,13 @@
+<h1><%= "#{@forecast.city.name} #{@forecast.date}" %></h1>
+
+<%= link_to "New forecast", [:new, :forecast] %>
+<p>
+  <b>Temperature min:</b>
+  <%= @forecast.min_temperature %>
+</p>
+
+<p>
+  <b>Temperature max:</b>
+  <%= @forecast.max_temperature %>
+</p>
+

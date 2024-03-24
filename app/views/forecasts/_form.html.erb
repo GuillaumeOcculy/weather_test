@@ -1,0 +1,10 @@
+<%= form_with model: @forecast do |f| %>
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Search" %>
+  </div>
+<% end %>
