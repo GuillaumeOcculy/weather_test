@@ -1,5 +1,3 @@
-require "accu_weather_api"
-
 class GetOrCreateCityService < ApplicationService
   validates :name, presence: true
 

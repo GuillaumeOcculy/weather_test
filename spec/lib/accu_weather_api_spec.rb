@@ -1,5 +1,4 @@
 require "rails_helper"
-require "accu_weather_api"
 
 RSpec.describe AccuWeatherApi do
 

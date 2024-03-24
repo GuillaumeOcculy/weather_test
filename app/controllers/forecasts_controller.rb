@@ -1,5 +1,3 @@
-require "accu_weather_api"
-
 class ForecastsController < ApplicationController
   before_action :require_user
 

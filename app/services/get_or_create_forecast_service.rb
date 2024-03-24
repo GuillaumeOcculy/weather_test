@@ -1,5 +1,3 @@
-require "accu_weather_api"
-
 class GetOrCreateForecastService < ApplicationService
   validates :location, presence: true
   validates :date, presence: true
