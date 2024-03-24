@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:create]
       resources :sessions, only: [:create]
+      resource :average_temperature, only: [:show]
     end
   end
 end

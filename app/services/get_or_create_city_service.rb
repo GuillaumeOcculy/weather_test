@@ -9,6 +9,7 @@ class GetOrCreateCityService < ApplicationService
   end
 
   def call
+    validate
     find_or_create_city
   rescue StandardError => e
     fail!(e.message)

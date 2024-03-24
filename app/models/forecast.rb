@@ -5,9 +5,17 @@ class Forecast < ApplicationRecord
   validates :response, presence: true
   validates :min_temperature, presence: true, numericality: true
   validates :max_temperature, presence: true, numericality: true
-  validates :unit, presence: true, inclusion: { in: %w[C F] }
+  validates :unit, presence: true, inclusion: { in: %w[C] }
 
   before_validation :set_attributes
+
+  def self.average_temperature
+    sum(&:average_temperature) / count
+  end
+
+  def average_temperature
+    (min_temperature + max_temperature) / 2
+  end
 
   private
 
