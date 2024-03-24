@@ -1,16 +1,19 @@
-<h1> Authentication </h1>
+<h1 class='text-center'>Authentication</h1>
+
 
 <%= form_with url: sessions_path do |f|%>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, required: true %>
+  <div class="mb-3">
+    <%= f.label :email, class: 'form-label' %><br />
+    <%= f.email_field :email, class: 'form-control', required: true, autofocus: true %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, required: true %>
+
+  <div class="mb-3">
+    <%= f.label :password, class: 'form-label' %><br />
+    <%= f.password_field :password, class: 'form-control', required: true %>
   </div>
-  <div class="actions">
-    <%= submit_tag %>
+
+  <div class="d-grid">
+    <%= submit_tag 'Submit', class: 'btn btn-primary' %>
   </div>
 
 <% end %>

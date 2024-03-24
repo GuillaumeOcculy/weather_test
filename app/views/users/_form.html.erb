@@ -1,19 +1,22 @@
 <%= form_with model: @user do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, required: true %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, required: true %>
+  <div class="mb-3">
+    <%= f.label :email, class: 'form-label' %><br />
+    <%= f.email_field :email, class: 'form-control', required: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :prefered_city %><br />
-    <%= f.select :prefered_city, City::NAMES %>
+  <% if @user.new_record? %>
+    <div class="mb-3">
+      <%= f.label :password, class: 'form-label' %><br />
+      <%= f.password_field :password, class: 'form-control', required: true %>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= f.label :prefered_city, class: 'form-label' %><br />
+    <%= f.select :prefered_city, city_array, class: 'form-select' %>
   </div>
-  
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="d-grid">
+    <%= f.submit "#{@user.new_record? ? 'Register' : 'Update'}", class: 'btn btn-danger' %>
   </div>
 <% end %>
