@@ -9,11 +9,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:notice] = "User created successfully"
+      flash[:success] = "User created successfully"
       session[:user_id] = @user.id
+
       redirect_to root_path
     else
-      flash[:notice] = @user.errors.full_messages.join(", ")
+      flash[:danger] = @user.errors.full_messages.join(", ")
       render :new, status: :unprocessable_entity
     end
   end
@@ -23,10 +24,10 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = "User updated successfully"
+      flash[:success] = "User updated successfully"
       redirect_to edit_user_path(@user)
     else
-      flash[:notice] = @user.errors.full_messages.join(", ")
+      flash[:danger] = @user.errors.full_messages.join(", ")
       render :edit, status: :unprocessable_entity
     end
   end

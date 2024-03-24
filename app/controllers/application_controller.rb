@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    redirect_to [:new, :session], notice: "You must be logged in to access this page" unless current_user
+    unless current_user
+      flash[:warning] = "You must be logged in to access this page"
+      redirect_to [:new, :session], warning: "You must be logged in to access this page"
+    end
   end
 end

@@ -15,7 +15,7 @@ class ForecastsController < ApplicationController
       redirect_to res.forecast
     else
       @forecast = Forecast.new
-      flash[:notice] = res.error_messages
+      flash[:danger] = res.error_messages
       render :new, status: :unprocessable_entity
     end
   end
