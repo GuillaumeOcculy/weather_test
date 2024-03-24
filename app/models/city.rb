@@ -1,5 +1,5 @@
 class City < ApplicationRecord
-  NAMES = ["London", "New-York", "Paris", "Seoul", "Tokyo"].freeze
+  NAMES = ["london", "new-york", "paris", "seoul", "tokyo"].freeze
 
   validates :name, presence: true, uniqueness: true, inclusion: { in: NAMES }
   validates :accu_weather_key, presence: true
