@@ -7,4 +7,10 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :edit, :update]
   resources :sessions, only: [:new, :create, :destroy]
   resources :forecasts, only: [:new, :create, :show]
+
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:create]
+    end
+  end
 end
