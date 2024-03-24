@@ -2,9 +2,9 @@ class User < ApplicationRecord
   has_secure_password
 
   validates :email, presence: true
-  validates :prefered_city, inclusion: { in: City::NAMES }
+  validates :prefered_city, inclusion: { in: City::NAMES, allow_nil: true }
 
-  before_save :sanitize_prefered_city
+  before_save :sanitize_prefered_city, if: :prefered_city
   before_save :downcase_email
 
   private
