@@ -4,7 +4,7 @@ class City < ApplicationRecord
   validates :name, presence: true, uniqueness: true, inclusion: { in: NAMES }
   validates :accu_weather_key, presence: true
 
-  before_save :sanitize_name
+  before_validation :sanitize_name, if: :name
 
   private
 

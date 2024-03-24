@@ -9,7 +9,7 @@ RSpec.describe City, type: :model do
   describe 'callbacks' do
     describe 'before_save' do
       it 'should sanitize name' do
-        city = create(:city, name: 'New-York')
+        city = create(:city, name: 'New-york ')
         expect(city.name).to eq('new-york')
       end
     end

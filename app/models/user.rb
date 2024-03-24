@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :prefered_city, inclusion: { in: City::NAMES, allow_nil: true }
 
-  before_save :sanitize_prefered_city, if: :prefered_city
+  before_validation :sanitize_prefered_city, if: :prefered_city
   before_save :downcase_email
 
   private

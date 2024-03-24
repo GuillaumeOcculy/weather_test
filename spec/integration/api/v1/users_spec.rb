@@ -10,13 +10,13 @@ describe 'Users API' do
         properties: {
           email: { type: :string, format: 'email', example: 'user@example.com' },
           password: { type: :string, format: 'password', example: 'password' },
-          prefered_city: { type: :string, example: 'Paris' }
+          prefered_city: { type: :string, example: 'paris' }
         },
         required: ['email', 'password']
       }
 
       response '201', 'user created' do
-        let(:user) { { email: 'user@example.com', password: 'password', prefered_city: 'Paris' } }
+        let(:user) { { email: 'user@example.com', password: 'password', prefered_city: 'paris' } }
         run_test!
       end
 
