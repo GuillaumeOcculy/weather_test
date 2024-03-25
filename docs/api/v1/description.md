@@ -35,7 +35,7 @@ the body in a JSON format to be de-serialized.
 # Rate limit
 
 The use of the API is limited.
-You can make a maximum of 120 calls per minute. 
+You can make a maximum of 5 calls per 10 seconds. 
 If you exceed this limit, you receive a `429 - Too Many Requests` error and are blocked for one minute.
 
 # Response codes
