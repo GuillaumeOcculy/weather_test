@@ -75,6 +75,7 @@ group :development do
   gem "web-console"
   gem 'bullet', '~> 7.1'
   gem 'annotate', '~> 3.2'
+  gem 'brakeman', '~> 6.1' # Security scanner for Ruby on Rails applications
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
