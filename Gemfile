@@ -63,17 +63,17 @@ gem 'rswag-ui', '~> 2.13' # Swagger UI for Rails API's
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "dotenv-rails"
-  gem "pry-byebug"
-  gem 'rspec-rails', '~> 6.1.0'
-  gem 'rswag-specs', '~> 2.13'
-  gem "factory_bot_rails"
+  gem "dotenv-rails" # Shim to load environment variables from .env into ENV in development
+  gem "pry-byebug" 
+  gem 'rspec-rails', '~> 6.1.0' # RSpec for Rails
+  gem 'rswag-specs', '~> 2.13' # RSpec tests for your Swagger API
+  gem 'bullet', '~> 7.1' # help to kill N+1 queries and unused eager loading
+  gem "factory_bot_rails" # A library for setting up Ruby objects as test data.
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'bullet', '~> 7.1' # help to kill N+1 queries and unused eager loading
   gem 'annotate', '~> 3.2' # Annotate Rails classes with schema information
   gem 'brakeman', '~> 6.1' # Security scanner for Ruby on Rails applications
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
