@@ -26,4 +26,6 @@ Things you may want to cover:
 
 * Run `rails server` and go to [localhost:3000](http://localhost:3000)
 
-* Rack Attack: On production, you can only make 5 calls per 10 seconds
+* You can try on [Staging](https://weather-test-610662844f1c.herokuapp.com/)
+
+* Rack Attack: On Staging, you can only make 5 calls per 10 seconds
