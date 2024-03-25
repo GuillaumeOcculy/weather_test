@@ -16,7 +16,7 @@ Things you may want to cover:
 
 * You can run: `rspec spec` 
 
-* Database initialization : `rails db/setup`
+* Database initialization : `rails db:setup`
 
 * User credentials : `text@example.com` / `password`
 
