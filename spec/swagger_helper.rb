@@ -19,17 +19,18 @@ RSpec.configure do |config|
       openapi: '3.0.1',
       info: {
         title: 'Weather Test API V1',
-        version: 'v1'
+        version: 'v1',
+        description: Rails.root.join("docs/api/v1/description.md").read,
       },
       paths: {},
       servers: [
         {
-          url: 'http://{defaultHost}',
-          variables: {
-            defaultHost: {
-              default: 'localhost:3000'
-            }
-          }
+          url: 'https://weather-test-610662844f1c.herokuapp.com',
+          description: 'Staging API server'
+        },
+        {
+          url: 'http://localhost:3000',
+          description: 'Local API server'
         }
       ]
     }

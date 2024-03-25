@@ -3,6 +3,42 @@ openapi: 3.0.1
 info:
   title: Weather Test API V1
   version: v1
+  description: "The Weather Test API allows you to write and read data from the Weather
+    Test application.\nIt conforms to [REST](https://en.wikipedia.org/wiki/REST).\nIt
+    has predictable resource-oriented URLS, accepts JSON request bodies, returns JSON
+    and uses standard HTTP status codes\nand verbs.\n\n# Authentication\n\nThe Weather
+    Test API requires authentication.\nIt's a bearer authentication, also called token
+    authentication.\n\nTo start your integration journey with the Weather Test API,
+    you must send your **authentication token** in the \n`Authorization` header when
+    making requests to the API.\n\n```\nAuthorization: Bearer <token>\n```\n\n\n#
+    Versioning\n\nThe API is versioned. The current version is 1.0 (referenced as
+    v1 in the endpoints).\n\n# Request headers\n\nEvery request should include the
+    header `Content-Type: application/json`.\n\n\n\n# Response format\n\nThe API only
+    supports JSON format. \nAll responses sent by the API will contain the header
+    `Content-Type: application/json` and their content is present in \nthe body in
+    a JSON format to be de-serialized.\n\n# Rate limit\n\nThe use of the API is limited.\nYou
+    can make a maximum of 120 calls per minute. \nIf you exceed this limit, you receive
+    a `429 - Too Many Requests` error and are blocked for one minute.\n\n# Response
+    codes\n\nThe API may return the following codes:\n\n| Code  | Name                  |
+    Description                                                                      |\n|
+    ----  | --------              | --------                                                                         |\n|
+    `200` | Success               | Success                                                                          |\n|
+    `201` | Created               | Resource created                                                                 |\n|
+    `204` | No Content            | Success but the response does not contain any
+    data (e.g., deletion)              |\n| `400` | Bad Request           | The request
+    is invalid                                                           |\n| `401`
+    | Unauthorized          | Authentication failed                                                            |\n|
+    `403` | Forbidden             | Insufficient rights to perform the requested action
+    \                             |\n| `404` | Not Found             | The resource
+    is not found                                                        |\n| `422`
+    | Unprocessable Entity  | The transmitted data is malformed                                                |\n|
+    `429` | Too Many Requests     | Too many requests have been made                                                 |\n|
+    `500` | Internal Server Error | An internal server error occurred (the technical
+    team is automatically notified) |\n\n# Errors\n\nWhen an error occurs, the response
+    code informs you about what is happening.\nThe response body contains:\n- the
+    status code,\n- the status name, a.k.a the error title\n- a human readable message.\n\nSee
+    the error schemas below.\n\n# Resources identification\n\nAll resources are identified
+    by a unique ID.\n\n"
 paths:
   "/api/v1/average_temperature":
     get:
@@ -102,7 +138,7 @@ paths:
               - email
               - password
 servers:
-- url: http://{defaultHost}
-  variables:
-    defaultHost:
-      default: localhost:3000
+- url: https://weather-test-610662844f1c.herokuapp.com
+  description: Staging API server
+- url: http://localhost:3000
+  description: Local API server
