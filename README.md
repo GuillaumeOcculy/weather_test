@@ -12,7 +12,9 @@ Things you may want to cover:
 
 * Bootstrap
 
-* [API Documentation](http://localhost:3000/api-docs)
+* [API local Documentation](http://localhost:3000/api-docs)
+
+* [API staging Documentation](https://weather-test-610662844f1c.herokuapp.com/api-docs)
 
 * You can run: `rspec spec` 
 
